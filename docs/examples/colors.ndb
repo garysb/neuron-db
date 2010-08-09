@@ -1,0 +1,271 @@
+hex=F0F8FF|rgb=240,248,255|name=Alice blue
+hex=E32636|rgb=227,38,54|name=Alizarin
+hex=E52B50|rgb=229,43,80|name=Amaranth
+hex=FFBF00|rgb=255,191,0|name=Amber
+hex=9966CC|rgb=153,102,204|name=Amethyst
+hex=FBCEB1|rgb=251,206,177|name=Apricot
+hex=00FFFF|rgb=0,255,255|name=Aqua
+hex=7FFFD4|rgb=127,255,212|name=Aquamarine
+hex=4B5320|rgb=75,83,32|name=Army green
+hex=7BA05B|rgb=123,160,91|name=Asparagus
+hex=6D351A|rgb=111,53,26|name=Auburn
+hex=007FFF|rgb=0,127,255|name=Azure
+hex=F0FFFF|rgb=240,255,255|name=Azure
+hex=E0FFFF|rgb=224,255,255|name=Baby blue
+hex=F5F5DC|rgb=245,245,220|name=Beige
+hex=3D2B1F|rgb=61,43,31|name=Bistre
+hex=000000|rgb=0,0,0|name=Black
+hex=0000FF|rgb=0,0,255|name=Blue
+hex=00DDDD|rgb=0,223,223|name=Blue-green
+hex=8A2BE2|rgb=138,43,226|name=Indigo
+hex=0095B6|rgb=0,149,182|name=Bondi blue
+hex=B5A642|rgb=181,166,66|name=Brass
+hex=66FF00|rgb=102,255,0|name=Bright green
+hex=08E8DE|rgb=8,232,222|name=Bright turquoise
+hex=FF55A3|rgb=255,85,163|name=Rose
+hex=CD7F32|rgb=205,127,50|name=Bronze
+hex=964B00|rgb=150,75,0|name=Brown
+hex=F0DC82|rgb=240,220,130|name=Buff
+hex=900020|rgb=128,0,32|name=Burgundy
+hex=CC5500|rgb=204,85,0|name=Orange
+hex=E97451|rgb=233,116,81|name=Burnt sienna
+hex=8A3324|rgb=138,51,36|name=Burnt umber
+hex=78866B|rgb=120,134,107|name=Camouflage green
+hex=592720|rgb=89,39,32|name=Caput Mortuum
+hex=C41E3A|rgb=196,30,58|name=Cardinal
+hex=960018|rgb=150,0,24|name=Carmine
+hex=FFA6C9|rgb=255,166,201|name=Carnation pink
+hex=99BADD|rgb=156,186,227|name=Carolina blue
+hex=ED9121|rgb=237,145,33|name=Carrot orange
+hex=ACE1AF|rgb=172,225,175|name=Celadon
+hex=DE3163|rgb=222,49,99|name=Cerise
+hex=007BA7|rgb=0,123,167|name=Cerulean
+hex=2A52BE|rgb=42,82,190|name=Cerulean blue
+hex=7FFF00|rgb=127,255,0|name=Chartreuse
+hex=DFFF00|rgb=223,255,0|name=Chartreuse
+hex=CD5C5C|rgb=205,92,92|name=Chestnut
+hex=7B3F00|rgb=123,63,0|name=Chocolate
+hex=E34234|rgb=227,66,52|name=Cinnabar
+hex=D2691E|rgb=210,105,30|name=Cinnamon
+hex=0047AB|rgb=0,71,171|name=Cobalt
+hex=B87333|rgb=184,115,51|name=Copper
+hex=996666|rgb=153,102,102|name=Copper rose
+hex=FF7F50|rgb=255,127,80|name=Coral
+hex=FF4040|rgb=255,64,64|name=Coral red
+hex=FBEC5D|rgb=251,236,93|name=Corn
+hex=6495ED|rgb=100,149,237|name=Cornflower blue
+hex=FFF8E7|rgb=255,248,231|name=Cosmic latte
+hex=FFFDD0|rgb=255,253,208|name=Cream
+hex=DC143C|rgb=220,20,60|name=Crimson
+hex=00FFFF|rgb=0,255,255|name=Aqua
+hex=00008B|rgb=0,0,139|name=Dark blue
+hex=654321|rgb=101,67,33|name=Dark brown
+hex=08457E|rgb=8,69,126|name=Dark cerulean
+hex=986960|rgb=152,105,96|name=Dark chestnut
+hex=CD5B45|rgb=205,91,69|name=Dark coral
+hex=B8860B|rgb=184,134,11|name=Dark goldenrod
+hex=013220|rgb=1,50,32|name=Dark green
+hex=BDB76B|rgb=189,183,107|name=Dark khaki
+hex=03C03C|rgb=3,192,60|name=Dark pastel green
+hex=E75480|rgb=231,84,128|name=Dark pink
+hex=E9967A|rgb=233,150,122|name=Dark salmon
+hex=2F4F4F|rgb=47,79,79|name=Dark slate gray
+hex=177245|rgb=23,114,69|name=Dark spring green
+hex=918151|rgb=145,129,81|name=Dark tan
+hex=FFA812|rgb=255,168,18|name=Dark tangerine
+hex=116062|rgb=17,96,98|name=Dark turquoise
+hex=423189|rgb=66,49,137|name=Dark violet
+hex=DA3287|rgb=218,50,135|name=Deep cerise
+hex=C154C1|rgb=193,84,193|name=Deep fuchsia
+hex=9955BB|rgb=153,85,187|name=Deep lilac
+hex=CD00CC|rgb=204,0,204|name=Deep magenta
+hex=FFCBA4|rgb=255,203,164|name=Deep peach
+hex=FF1493|rgb=255,20,147|name=Deep pink
+hex=1560BD|rgb=21,96,189|name=Denim
+hex=1E90FF|rgb=30,144,255|name=Dodger blue
+hex=C2B280|rgb=194,178,128|name=Ecru
+hex=7DF9FF|rgb=125,249,255|name=Electric blue
+hex=00FF00|rgb=0,255,0|name=Electric green
+hex=6600FF|rgb=102,0,255|name=Electric indigo
+hex=CCFF00|rgb=204,255,0|name=Electric lime
+hex=BF00FF|rgb=191,0,255|name=Electric purple
+hex=50C878|rgb=80,200,120|name=Emerald
+hex=990066|rgb=153,0,102|name=Eggplant
+hex=801818|rgb=128,24,24|name=Falu red
+hex=4F7942|rgb=79,121,66|name=Fern green
+hex=B22222|rgb=178,34,34|name=Firebrick
+hex=EEDC82|rgb=238,220,130|name=Flax
+hex=228B22|rgb=34,139,34|name=Forest green
+hex=F64A8A|rgb=246,74,138|name=French Rose
+hex=FF00FF|rgb=255,0,255|name=Fuchsia
+hex=FF77FF|rgb=255,119,255|name=Fuchsia Pink
+hex=E49B0F|rgb=228,155,15|name=Gamboge
+hex=D4AF37|rgb=212,175,55|name=Gold (metallic)
+hex=FFD700|rgb=255,215,0|name=Gold
+hex=996515|rgb=153,101,21|name=Golden brown
+hex=FFDF00|rgb=255,223,0|name=Golden yellow
+hex=DAA520|rgb=218,165,32|name=Goldenrod
+hex=465945|rgb=70,89,69|name=Gray-asparagus
+hex=00FF00|rgb=0,255,0|name=Lime
+hex=008000|rgb=0,128,0|name=Green
+hex=ADFF2F|rgb=173,255,47|name=Green-yellow
+hex=808080|rgb=128,128,128|name=Grey
+hex=5218FA|rgb=82,24,250|name=Han Purple
+hex=3FFF00|rgb=63,255,0|name=Harlequin
+hex=DF73FF|rgb=223,115,255|name=Heliotrope
+hex=F400A1|rgb=244,0,161|name=Hollywood Cerise
+hex=FF00CC|rgb=255,0,204|name=Hot Magenta
+hex=FF69B4|rgb=255,105,180|name=Hot Pink
+hex=00416A|rgb=0,65,106|name=Indigo dye
+hex=4B0082|rgb=75,0,130|name=Pigment indigo
+hex=002FA7|rgb=0,47,167|name=International Klein Blue
+hex=FF4F00|rgb=255,79,0|name=International orange
+hex=009000|rgb=0,153,0|name=Islamic green
+hex=FFFFF0|rgb=255,255,240|name=Ivory
+hex=00A86B|rgb=0,168,107|name=Jade
+hex=4CBB17|rgb=76,187,23|name=Kelly green
+hex=C3B091|rgb=195,176,145|name=Khaki
+hex=F0E68C|rgb=240,230,140|name=Light khaki
+hex=B57EDC|rgb=181,126,220|name=Lavender (floral)
+hex=E6E6FA|rgb=230,230,250|name=Lavender (web)
+hex=CCCCFF|rgb=204,204,255|name=Lavender blue
+hex=FFF0F5|rgb=255,240,245|name=Lavender blush
+hex=C4C3D0|rgb=196,195,221|name=Lavender gray
+hex=EE82EE|rgb=238,130,238|name=Lavender magenta
+hex=FBAED2|rgb=251,174,210|name=Lavender pink
+hex=967BB6|rgb=150,120,182|name=Lavender purple
+hex=FBA0E3|rgb=251,160,227|name=Lavender rose
+hex=7CFC00|rgb=124,252,0|name=Lawn green
+hex=FDE910|rgb=253,233,16|name=Lemon
+hex=FFFACD|rgb=255,250,205|name=Lemon chiffon
+hex=ADD8E6|rgb=173,216,230|name=Light blue
+hex=C8A2C8|rgb=200,162,200|name=Lilac
+hex=BFFF00|rgb=191,255,0|name=Lime
+hex=00FF00|rgb=0,255,0|name=Lime
+hex=32CD32|rgb=50,205,50|name=Lime green
+hex=FAF0E6|rgb=250,240,230|name=Linen
+hex=FF00FF|rgb=255,0,255|name=Fuchsia
+hex=0BDA51|rgb=11,218,81|name=Malachite
+hex=800000|rgb=128,0,0|name=Maroon
+hex=73C2FB|rgb=115,194,251|name=Maya blue
+hex=E0B0FF|rgb=224,176,255|name=Mauve
+hex=915F6D|rgb=145,95,109|name=Mauve Taupe
+hex=0000CD|rgb=0,0,205|name=Medium blue
+hex=AF4035|rgb=175,64,53|name=Medium carmine
+hex=9370DB|rgb=147,112,219|name=Medium purple
+hex=003366|rgb=0,51,102|name=Midnight Blue
+hex=98FF98|rgb=152,255,152|name=Mint Green
+hex=FFE4E1|rgb=255,228,225|name=Misty rose
+hex=ADDFAD|rgb=173,223,173|name=Moss green
+hex=997A8D|rgb=153,122,141|name=Mountbatten pink
+hex=FFDB58|rgb=255,219,88|name=Mustard
+hex=21421E|rgb=33,66,30|name=Myrtle
+hex=FFDEAD|rgb=255,222,173|name=Navajo white
+hex=000080|rgb=0,0,128|name=Navy Blue
+hex=CC7722|rgb=204,119,34|name=Ochre
+hex=008000|rgb=0,128,0|name= Green
+hex=CFB53B|rgb=207,181,59|name=Old Gold
+hex=FDF5E6|rgb=253,245,230|name=Old Lace
+hex=796878|rgb=121,104,120|name=Old Lavender
+hex=C08081|rgb=192,46,76|name=Old Rose
+hex=808000|rgb=128,128,0|name=Olive
+hex=6B8E23|rgb=107,142,35|name=Olive Drab
+hex=9AB973|rgb=154,185,115|name=Olivine
+hex=FF7F00|rgb=255,127,0|name=Orange
+hex=FFA500|rgb=255,165,0|name=Orange
+hex=FFA000|rgb=255,160,0|name=Orange Peel
+hex=FF4500|rgb=255,69,0|name=Vermilion
+hex=DA70D6|rgb=218,112,214|name=Orchid
+hex=AFEEEE|rgb=175,238,238|name=Pale blue
+hex=987654|rgb=152,118,84|name=Pale brown
+hex=AF4035|rgb=175,64,53|name=Pale carmine
+hex=DDADAF|rgb=221,173,175|name=Pale chestnut
+hex=ABCDEF|rgb=171,205,239|name=Pale cornflower blue
+hex=F984E5|rgb=249,132,229|name=Pale magenta
+hex=FADADD|rgb=250,218,221|name=Pale pink
+hex=DB7093|rgb=219,112,147|name=Pale red-violet
+hex=FFEFD5|rgb=255,239,213|name=Papaya whip
+hex=77DD77|rgb=119,221,119|name=Pastel green
+hex=FFD1DC|rgb=255,209,220|name=Pastel pink
+hex=FFE5B4|rgb=255,229,180|name=Peach
+hex=FFCC99|rgb=255,204,153|name=Peach-orange
+hex=FADFAD|rgb=250,223,173|name=Peach-yellow
+hex=D1E231|rgb=209,226,49|name=Pear
+hex=CCCCFF|rgb=204,204,255|name=Periwinkle
+hex=1C39BB|rgb=28,57,187|name=Persian blue
+hex=00A693|rgb=0,166,147|name=Persian green
+hex=32127A|rgb=50,18,122|name=Persian indigo
+hex=CC3333|rgb=204,51,51|name=Persian red
+hex=F77FBE|rgb=247,127,190|name=Persian pink
+hex=FE28A2|rgb=254,40,162|name=Persian rose
+hex=EC5800|rgb=236,88,0|name=Persimmon
+hex=01796F|rgb=1,121,111|name=Pine Green
+hex=FFC0CB|rgb=255,192,203|name=Pink
+hex=FF9966|rgb=255,153,102|name=Pink-orange
+hex=E5E4E2|rgb=229,228,226|name=Platinum
+hex=B0E0E6|rgb=176,224,230|name=Powder blue
+hex=CC8899|rgb=204,136,153|name=Puce
+hex=003153|rgb=0,49,83|name=Prussian blue
+hex=DD00FF|rgb=221,0,255|name=Psychedelic purple
+hex=FF7518|rgb=255,117,24|name=Pumpkin
+hex=800080|rgb=128,0,128|name=Purple
+hex=A020F0|rgb=160,92,240|name=Purple
+hex=50404D|rgb=80,64,77|name=Purple Taupe
+hex=734A12|rgb=115,74,18|name=Raw umber
+hex=FF0000|rgb=255,0,0|name=Red
+hex=C71585|rgb=199,21,133|name=Red-violet
+hex=D70040|rgb=215,0,64|name=Rich carmine
+hex=CA1F7B|rgb=202,31,23|name=Rich magenta
+hex=00CCCC|rgb=0,204,204|name=Robin egg blue
+hex=FF007F|rgb=255,0,127|name=Rose
+hex=905D5D|rgb=144,93,93|name=Rose Taupe
+hex=4169E1|rgb=65,105,225|name=Royal blue
+hex=6B3FA0|rgb=107,63,160|name=Royal purple
+hex=E0115F|rgb=224,17,95|name=Ruby
+hex=80461B|rgb=128,70,27|name=Russet
+hex=B7410E|rgb=183,65,14|name=Rust
+hex=FF6600|rgb=255,102,0|name=Safety orange
+hex=F4C430|rgb=244,196,48|name=Saffron
+hex=FF8C69|rgb=255,140,105|name=Salmon
+hex=F4A460|rgb=244,164,96|name=Sandy brown
+hex=92000A|rgb=146,0,10|name=Sangria
+hex=082567|rgb=8,37,103|name=Sapphire
+hex=FF2400|rgb=255,36,0|name=Scarlet
+hex=FFD800|rgb=255,216,0|name=School bus yellow
+hex=2E8B57|rgb=46,139,87|name=Sea Green
+hex=FFF5EE|rgb=255,245,238|name=Seashell
+hex=FFBA00|rgb=255,186,0|name=Selective yellow
+hex=704214|rgb=112,66,20|name=Sepia
+hex=009E60|rgb=0,158,96|name=Shamrock green
+hex=FC0FC0|rgb=252,15,192|name=Shocking Pink
+hex=C0C0C0|rgb=192,192,192|name=Silver
+hex=87CEEB|rgb=135,206,235|name=Sky blue
+hex=708090|rgb=112,128,144|name=Slate gray
+hex=003399|rgb=0,51,153|name=Powder blue
+hex=A7FC00|rgb=167,252,0|name=Spring bud
+hex=00FF7F|rgb=0,255,127|name=Spring green
+hex=4682B4|rgb=70,130,180|name=Steel blue
+hex=D2B48C|rgb=210,180,140|name=Tan
+hex=F28500|rgb=242,133,0|name=Tangerine
+hex=FFCC00|rgb=255,204,0|name=Tangerine yellow
+hex=483C32|rgb=72,60,50|name=Taupe
+hex=D0F0C0|rgb=208,240,192|name=Tea Green
+hex=F88379|rgb=248,131,194|name=Tea rose (orange)
+hex=F4C2C2|rgb=244,194,194|name=Tea rose
+hex=008080|rgb=0,128,128|name=Teal
+hex=CD5700|rgb=205,87,0|name=Tenné
+hex=E2725B|rgb=226,114,91|name=Terra cotta
+hex=D8BFD8|rgb=216,191,216|name=Thistle
+hex=30D5C8|rgb=48,213,200|name=Turquoise
+hex=66023C|rgb=102,2,60|name=Tyrian purple
+hex=120A8F|rgb=18,10,143|name=Ultramarine
+hex=E34234|rgb=227,66,51|name=Vermilion
+hex=8B00FF|rgb=139,0,255|name=Violet
+hex=EE82EE|rgb=238,130,238|name=Violet
+hex=40826D|rgb=64,130,109|name=Viridian
+hex=F5DEB3|rgb=245,222,179|name=Wheat
+hex=FFFFFF|rgb=255,255,255|name=White
+hex=C9A0DC|rgb=201,160,220|name=Wisteria
+hex=FFFF00|rgb=255,255,0|name=Yellow
+hex=9ACD32|rgb=154,205,50|name=Yellow-green
+hex=EBC2AF|rgb=235,194,175|name=Zinnwaldite

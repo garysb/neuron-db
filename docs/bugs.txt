@@ -1,0 +1,5 @@
++ 1. Node child not added to parent on 'add links'
++ 2. Connection crashes when running a script
++ 3. 'get links [1]' returns True instead of the links in node 1
+- 4. The new manager has a call to isinstance. This needs to be removed for extended nodes to work correctly. eg. security
+- 5. Need to fix ugly hack to check if item has been modified. We need a method to produce micro seconds.

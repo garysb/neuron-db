@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# vim: set ts=4 sw=4 nowrap:
+import sys
+import ctypes
+from libneuron-db import loggers
+from libneuron-db import controllers
+
+def usage():
+	print 'Usage: ./neuron-db [OPTION]...'
+	print 'Start the neuron-db database server\n'
+	print 'Options are any combination of the following:'
+	print '-c, --config=FILE\t\t(NOT IMPLEMENTED)Use the configuration file specified'
+	print '-d, --daemon\t\t\tRun the database in daemon mode'
+	print '-h, --help\t\t\tThis help page'
+	print '-p, --port=PORT\t\t\t(NOT IMPLEMENTED) The port to bind to'
+
+# If we are running this as a main thread, recreate as a daemon
+if __name__ == "__main__":
+	# FIXME: Need to export this to our distribution specific files
+	# Try set the name of the application so we can see it in ps
+	if sys.platform == 'linux2':
+		try:
+			libc											= ctypes.CDLL('libc.so.6')
+			libc.prctl(15, 'neuron-db', 0, 0, 0)
+		except:
+			pass
+	elif sys.platform == 'darwin':
+		try:
+			libc											= ctypes.CDLL("libc.dylib", ctypes.RTLD_GLOBAL)
+			libc.prctl(15, 'neuron-db', 0, 0, 0)
+		except:
+			pass
+	elif sys.platform == 'win32':
+		pass
+
+	# Setup option parsing
+	import getopt
+	try:
+		short_opts											= 'hdp:c:'
+		long_opts											= ['help', 'daemon','config=','port=']
+		opts, args											= getopt.getopt(sys.argv[1:], short_opts, long_opts)
+	except getopt.GetoptError:
+		# print help information and exit:
+		usage()
+		sys.exit(2)
+
+	# FIXME: Should be using a lambda function map
+	for opt in opts:
+		if '-h' in opt[0] or '--help' in opt[0]:
+			usage()
+			sys.exit(0)
+
+	# FIXME: Should be using a lambda function map
+	for opt in opts:
+		if '-d' in opt[0] or '--daemon' in opt[0]:
+			from libdroplet import daemon
+			ret_val											= daemon.set_daemon()
+			break
+
+	# Start our logging system
+	logger													= loggers.run_logger()
+	loggers.log_queue.put({'type':'notice','source':'system','message':'neuron-db started on a '+sys.platform+' system'})
+	logger.start()
+
+	# Start our controller system
+	controller												= controllers.run_controller()
+	controller.start()
+
+	# Join our child threads to the main thread
+	logger.join()
+	controller.join()
+

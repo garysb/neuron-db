@@ -1,0 +1,35 @@
+With joint comprehentions, we need to come up with rules.
+For instance if we use:
+	get links links [2] <-- This should return the links of 2's links
+but the problem is for instance:
+	remove links [2] <-- Should this remove 2's links or remove the nodes that 2 links to?
+
+-------------------------------------------------------------------------------
+Build a range of interfaces and provide the ability to use them. Here are are
+list of interfaces we might want:
+* sort							(Let users order/sort their linked nodes)
+* stats							(Generate statistics for linked nodes)
+*range							(Get nodes within a range. eg. by creation date or value)
+** group						(when node called through group link, return all the links data within a link type)
+
+-------------------------------------------------------------------------------
+Need to implement security model.
+This will work by creating our root node (node 1) as our base security node.
+All users are then members (linked) to our root node. When a node is
+created, it inherits the security link from the user by default. By doing this, we
+can create any combination of security model on a node basis that we want. eg.
+we can create a group node, and assign the node to the group. (a group node would
+just be a node with links to users). We can assign any kind of information we want
+to users simply by attaching nodes to the user (say: dob, address, expiry,...).
+
+-------------------------------------------------------------------------------
+Need to implement variables
+For variables we need three different levels of variables. Level 1 should be set
+to the client connection. This will let people define tempory variables for each
+session as a simple place marker.
+Level 2 should be attached to the user. This means that a user can define variables
+to be used in the future. These will be attached to the users node, and will contain
+a node id to reference by the name.
+Level 3 should be a global variable that can be shared. To impliment this, we should
+probably use the standard level 2, but attach it higher up the security chain. This
+will let us assign variables to groups, users, nodes, ...

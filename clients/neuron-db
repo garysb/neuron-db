@@ -1,0 +1,205 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# vim: set ts=4 sw=4 nowrap:
+import sys
+import socket
+import select
+import string
+
+class Connection:
+	""" This object creates a communications library for the neuron-db database.
+	"""
+
+	def __init__(self, host, port):
+		"""
+		Instantiate the connection object and create the connection to the server. Requires a hostname and a port
+		"""
+		self.host											= host
+		self.port											= port
+		self.sock											= None
+		self.output											= None
+
+		self.connect()
+
+	def connect(self):
+		"""
+		Connect to a host. Don't try to reopen an already connected instance.
+		"""
+
+		if self.sock:
+			return
+
+		# If the user added the -v flag, inform them we are trying to connect
+		if options.verbose:
+			print 'Connecting to %s on port %s' % (self.host, self.port)
+
+		msg													= "getaddrinfo returns an empty list"
+
+		for res in socket.getaddrinfo(self.host, self.port, 0, socket.SOCK_STREAM):
+			af, socktype, proto, canonname, sa				= res
+			try:
+				self.sock									= socket.socket(af, socktype, proto)
+				self.sock.connect(sa)
+			except socket.error, msg:
+				if self.sock:
+					self.sock.close()
+				self.sock									= None
+				continue
+			break
+		if not self.sock:
+			#raise socket.error, msg
+			if options.verbose:
+				print 'Error, %s' % msg.__str__()
+
+			sys.exit(1)
+
+	def __del__(self):
+		"""Destructor -- close the connection."""
+		self.close()
+
+	def close(self):
+		"""Close the connection."""
+		if self.sock:
+			self.sock.close()
+		self.sock											= 0
+
+	def send(self, data):
+		""" When we send data to the server, we need to first calculate the size of the information
+			we want to send. We then tack this into the first 32 bytes of information.
+
+			The server must check this value to ensure that they fetch all the information from the
+			clients buffer.
+		"""
+		data_length											= int(data.__len__())#+32
+		self.sock.send("%032d%s" % (data_length, data))
+
+	def read(self):
+		""" Read information from the socket.
+			Start by reading the first 32 bytes to get the message length. Once
+			we have the length, we loop through the socket reads to fetch all
+			the information and pushing it onto our output stack.
+		"""
+
+		# Fetch the packet size from the first 32 bytes of data.
+		try:
+			data_length										= int(self.sock.recv(32))
+			self.output										= ''
+		except ValueError:
+			sys.exit(0)
+
+		# Loop through sockets reads until we have all the data.
+		while data_length >= 1:
+			data											= self.sock.recv(8192)
+			data_length										= data_length - int(data.__len__())
+			self.output										= self.output + data
+
+	def console(self):
+		""" Create an interactive shell to interface with the data. """
+
+		# Read and display the welcome message
+		self.read()
+
+		# If we want verbose information, display the welcome message
+		print self.output
+		self.output											= None
+
+		# Loop through the send/recv dance
+		while True:
+			# Read input from the user
+			data											= raw_input("neuron-db>")
+
+			# Make sure we have some data
+			if string.strip(data) == '':
+				continue
+
+			# Send the data to the server
+			self.send(data)
+			data											= None
+
+			# Read the response we get back from the server and show it.
+			self.read()
+
+			# If we want verbose information, display the welcome message
+			print self.output
+			self.output											= None
+
+	def run_script(self, script):
+		# Read and display the welcome message
+		self.read()
+
+		# If we want verbose information, display the welcome message
+		print self.output
+		self.output											= None
+
+		script_src												= open(script, 'rb')
+		for line in script_src.readlines():
+			line												= string.strip(line)
+
+			# Make sure we dont have a blank line
+			if line.__len__() == 0:
+				continue
+
+			# Check for a comment
+			if line[0] == '#':
+				continue
+
+			# Send the data to the server
+			self.send(line.replace("\n", ""))
+
+			# Read the response we get back from the server and show it.
+			self.read()
+
+			# If we want verbose information, display the welcome message
+			print self.output
+			self.output											= None
+
+		# Bug 2: We need to close the connection properly, so send a quit command
+		self.send('quit')
+		# Read the response we get back from the server and show it.
+		self.read()
+		# If we want verbose information, display the welcome message
+		print self.output
+		self.output											= None
+
+# If we are running this as a main thread, recreate as a daemon
+if __name__ == "__main__":
+	# FIXME: Need to export the libc code to a linux specific file
+	# Try set the name of the application so we can see it in ps
+	try:
+		import ctypes
+		libc												= ctypes.CDLL('libc.so.6')
+		libc.prctl(15, 'Neuron', 0, 0, 0)
+	except:
+		pass
+
+	# Parse our command line options
+	from optparse import OptionParser
+	parser													= OptionParser(version="%prog 0.2")
+
+	# Define our options
+	parser.usage											= "usage: %prog [options] HOSTNAME"
+	parser.add_option("-s", "--script", type="string", dest="script", help="read in a node script to be executed", metavar="FILE")
+	parser.add_option("-p", "--port", type="int", dest="port", help="set the DropletDB server port number [%default]", default=3307, metavar="PORT")
+	parser.add_option("-q", "--quiet", action="store_false", dest="verbose", default=False, help="don't print additional information")
+	parser.add_option("-v", "--verbose", action="store_true", dest="verbose", default=False, help="print additional information")
+
+	(options, args)											= parser.parse_args()
+
+	# Check the user has entered the servers hostname
+	if len(parser.largs) != 1:
+		parser.error("the neuron-db's server hostname needs to be entered")
+
+	# Try to create the connection to the server
+	server													= Connection(parser.largs[0], options.port)
+	server.connect()
+
+	# Check if we need to run a script or go into interactive mode
+	if options.script:
+		server.run_script(options.script)
+		server.close()
+		sys.exit(0)
+
+	server.console()
+	server.close()
+	sys.exit(0)
+

@@ -1,0 +1,85 @@
+# Add nodes to the system
+add [[['colors'],[],'Colors']]
+add [[['color','red'],[1:['colors']],'#FF0000']]
+add [[['color','green'],[1:['colors']],'#00FF00']]
+add [[['color','blue'],[1:['colors']],'#0000FF']]
+add [[['color','white'],[1:['colors']],'#FFFFFF'],[['color','black'],[1:['colors']],'#000000']]
+add [[['color','pink'],[1:['colors']],'#FFAAAA']]
+
+# Add links to a node
+add links [1:[2:['red']]]
+add links [1:[3:['green']]]
+add links [1:[4:['blue']]]
+add links [1:[7:['pink']]]
+add links [1:[5:['white'],6:['black','blank','clear']]]
+
+# Remove links
+remove links [1:[7:['pink']]]
+
+# Remove nodes (And its links in other nodes)
+remove [7]
+
+# Get information and data for nodes
+get links [1]
+get links [2,3,4]
+get links [1:['red','colors']]
+get links[1:['colors']]
+
+get data [2]
+get created [2,3,4]
+get modified [2,3,4]
+get mime [2,3,4]
+get size [2,3,4]
+get meta [4,5]
+
+# Adding more information to nodes
+add meta [1:['lists']]
+add meta [2:['hex','rgb']]
+add meta [3:['hex','rgb'],4:['hex','rgb'],5:['hex','rgb'],6:['hex','rgb']]
+add links [1:[2:['hex','rgb'],3:['hex','rgb'],4:['hex','rgb'],5:['hex','rgb'],6:['hex','rgb']]]
+add [[['color','white','cmyk'],[1:['colors','cmyk','white']],'0,0,0,0']]
+add [[['color','black','cmyk'],[1:['colors','cmyk','black']],'0,0,0,100']]
+
+# Mixing links to get specific data
+get links [1:['cmyk','black']]
+get links [1:['rgb']]
+get links [1:['white']]
+get links [1:['white','hex']]
+
+# Getting specific data
+get links data [1:['white']]
+get links data [1:['cmyk','white']]
+get links data [1:['hex','white']]
+get links modified [1:['hex']]
+get links links [1:['white']]
+
+### Imitating relational data (ALTHOUGH YOU WOULDNT WANT TO DO THIS)
+# Pink has already been removed, so 7th value will be false
+remove [1,2,3,4,5,6,7,8,9]
+
+# Create a colors table
+add [[['table','colors'],[],'Colors']]
+
+# Add a red row to the table
+add [[['row','1'],[10:['row','1']],'1']]
+add [[['name'],[11:['row','1','name']],'red']]
+add [[['hex'],[11:['row','1','hex']],'#FF0000']]
+add [[['cmyk'],[11:['row','1','cmyk']],'0,100,100,0']]
+
+# Add a green row to the table
+add [[['row','2'],[10:['row','2']],'2']]
+add [[['name'],[15:['row','2','name']],'green']]
+add [[['hex'],[15:['row','2','hex']],'#00FF00']]
+add [[['cmyk'],[15:['row','2','cmyk']],'100,0,100,0']]
+
+# Add a blue row to the table
+add [[['row','3'],[10:['row','3']],'3']]
+add [[['name'],[19:['row','3','name']],'blue'],[['hex'],[19:['row','3','hex']],'#0000FF']]
+add [[['cmyk'],[19:['row','3','cmyk']],'100,100,0,0']]
+
+# Get a list of rows (SELECT `c_id` FROM `Colors`;)
+get links data [10]
+# Get the values of row 1 (SELECT * FROM `Colors` WHERE `c_id`='1';)
+get links links data [10:['1']]
+# Get the value in the name column from row 1 (SELECT `name` FROM `Colors` WHERE `c_id`='1';)
+get links links data [10:['1']] ['name']

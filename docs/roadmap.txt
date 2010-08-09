@@ -1,0 +1,46 @@
++:done -:todo !:not doing
+
+Node 1.p10
++ Basic prototype storing and referencing data
++ Daemonize server
++ Autocreate node data
+Node 1.p9
++ Store node items in db
++ Create Node cli client
++ Create script support for Node client
++ Create variables for local session
+! Test on linux, osx, windows
+Node 1.p8
+- Format client output
+- Create security nodes
+- Create server based variables
+- Create filters
+- Redefine grammer to fix problems. (see top section of todo)
++ bug 1: Remove references to previous reference from list
+Node 1.p7
+! Store data in disk image (maybe)
+- Create gui interface (qt)
+- Create php pecl extension
+- Create python extension
+- Create c extension
+- Create ruby extension
+- Move away from opt parse in boot.py to use same as nclient.py
+Node 1.p6
+- Convert Grammer parser to c
+- Remove errors and add sulutions/fixes
+Node 1.p5
+- Create Interfaces (plugins)
+- Create default security types (key, passwd, client host,...)
+- Create Grammer adapters (json, xml, csv, ...)
+Node 1.p4
+- Convert Node file to c
+- Convert Controllers to c
+Node 1.p3
+- Remove bdb dependancy
+Node 1.p2
+- Convert remaining code to c
+Node 1.p1
+- Unit tests
+- Check for memory leaks
+- Security assesment
+Node 1

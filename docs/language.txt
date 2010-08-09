@@ -1,0 +1,47 @@
+# Action data layouts
+links		[srcid1:[dstid1:['name1','name2',...],...],...]
+meta		[srcid1:['meta1','meta2',...],...]
+nodes		[nodeid1,...]
+
+# Getting node information
+get [node1,node2] <-- Returns all node information, but not node data
+get links [node1:['colors'],node2:['colors,size']] <-- Get link details for a node
+get meta [node1,node2] <-- Get the meta keywords for nodes
+get data [node1,node2] <-- Gets the nodes data
+get size [node1,node2] <-- Get the size of the data in bytes
+get mime [node1,node2] <-- Get the registered mime type for the data
+
+# Creating nodes and node data
+add [['meta1','meta2'],[],'Node data to be stored']
+add links [node1:[3:['color'],4:['size']],node2:[3:['color'],4:['size']]]
+add links [2:[3:['color','pigment'],4:['size']],3:[4:['color'],5:['size']]]
+add meta [node1:['meta1','meta2'],node2:['meta1','meta2']]
+add meta [2:['try5','try6'],3:['try7','try8']]
+
+# Removing nodes and relationships
+remove [node1,node2] <-- Remove all the node information and data
+remove links [nodesrc:[nodedst:['link']]] <-- Remove the nodes links
+remove meta [node1:['meta']] <-- Remove the node meta data
+remove data [node1,node2] <-- Remove the nodes data
+
+# Modifying node information and content
+set [[meta1,meta2],[parent1,parent2],[child1,child2],data]
+set links [[node1, [3:['color'],4:['size']]],[node2,[3:['color'],4:['size']]]]
+set meta [[node1, [meta1,meta2]],[node2,[meta1,meta2]]]
+
+# Transaction control (labeled transaction so we can roll back to a point or parts of a transaction)
+start [fase1, fase2]
+undo [fase1,fase2]
+commit [fase1,fase2]
+
+# Definitions (do we want multiple at same time?: add [1,2] as ['a','b']
+[add|get|set|remove] [|links|data|meta|mime|created|modified] [data] as ['definition']
+get defined <-- Gets list of all definitions for the current session
+get ['definition1','definition2'] <-- Get the definitions listed
+set ['definition':'value']
+
+filter [rules]
+
+# Nested queries
+add links [node1:[(get ['variable1']):['link1']]] <-- Adds the id stored in variable1 as the link1 link
+add meta [node1:[(get meta [node5])]] <-- Copies the meta data from node5 into node1
